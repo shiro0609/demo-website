@@ -1,0 +1,89 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar */
+.one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 5px 0;
+  background-color: aquamarine;
+}
+
+a {
+  text-decoration: none;
+}
+
+.one ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  gap: 20px;
+}
+
+.menu-btn {
+  display: block;
+}
+
+.menu-item {
+  /* display: none; */
+  gap: 20px;
+}
+
+/* .show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gray;
+  position: absolute;
+  padding: 0 0 20px 0;
+  top: 77px;
+  width: 100%;
+  left: 50%;
+  transform: translate( -50%);
+} */
+
+.signup,
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+}
+
+.signup:hover,
+.login:hover {
+  background-color: #fff;
+  color: black;
+}
+
+@media (min-width:992px) {
+  .one {
+    gap: 50px;
+  }
+
+  .one ul {
+    flex-direction: row;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
