@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <strong>Name:</strong>
+  <div id="name"></div>
+
+  <strong>Height:</strong>
+  <div id="height"></div>
+
+  <strong>Eye color:</strong>
+  <div id="eyecolor"></div>
+
+  <button class="data">Click for info</button>
+
+
+  <script>
+    let name = document.getElementById("name");
+    let height = document.getElementById("height");
+    let eyecolor = document.getElementById("eyecolor");
+
+    const button = document.querySelector(".data");
+
+    button.addEventListener("click", (generateData) => {
+      const randomNum = Math.ceil(Math.random() * 10)
+
+      fetch(`https://swapi.dev/api/people/${randomNum}`)
+        .then(response => response.json())
+        .then(result => {
+          // console.log(result)
+          name.innerHTML = result['name'];
+          height.innerHTML = result['height'];
+          eyecolor.innerHTML = result['eye_color'];
+        })
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>
